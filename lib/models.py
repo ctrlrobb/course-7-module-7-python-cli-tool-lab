@@ -5,7 +5,8 @@ class Task:
 
     def complete(self):
         self.completed = True
-        print(f"✅ Task '{self.title}' marked as complete.")
+        # Match exact string: ✅ Task 'Title' completed.
+        print(f"✅ Task '{self.title}' completed.")
 
 class User:
     def __init__(self, name):
@@ -14,7 +15,8 @@ class User:
 
     def add_task(self, task):
         self.tasks.append(task)
-        print(f"📌 Added task '{task.title}' for user {self.name}.")
+        # Match exact string: 📌 Task 'Title' added to Name.
+        print(f"📌 Task '{task.title}' added to {self.name}.")
 
     def get_task_by_title(self, title):
         for task in self.tasks:

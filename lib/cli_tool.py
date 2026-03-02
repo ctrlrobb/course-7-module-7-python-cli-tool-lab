@@ -1,5 +1,5 @@
 import argparse
-from models import Task, User
+from lib.models import Task, User
 
 # Global dictionary to store users and their tasks
 users = {}
@@ -31,7 +31,7 @@ def complete_task(args):
     else:
         print(f"❌ Error: Task '{args.title}' not found for user {args.user}.")
 
-# CLI entry point (rest of the code remains the same)
+# CLI entry point 
 def main():
     parser = argparse.ArgumentParser(description="Task Manager CLI")
     subparsers = parser.add_subparsers()
